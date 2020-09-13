@@ -76,6 +76,10 @@ function processLastItem(stringList, callback) {
 }
 // console.log(processLastItem(['foo', 'bar'], (str) => str + str));
 
+
+
+
+
 /**
  * ### Challenge `processSum`
  * 
@@ -100,6 +104,10 @@ function processSum(num1, num2, callback) {
 // console.log(processSum(10, 30, num=>`${num} is a big number!`));
 // console.log(processSum(-5, -1, num=>num+1000));
 
+
+
+
+
 /**
  * ### Challenge `processProduct`
  * 
@@ -118,9 +126,11 @@ function processSum(num1, num2, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  return callback(num1*num2);
 }
+console.log(processProduct(2, 7, num=>`${num} is a big number!`));
+console.log(processProduct(25, 0, num=>num+1000));
 
 /**
  * ### Challenge `processDuplicateFree`
