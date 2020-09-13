@@ -48,9 +48,14 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, callback) {
+  return callback(list.length);
 }
+// console.log(processLength(['foo', 'bar'], (num) => num+1000));
+// console.log(processLength([], (num) => `There are ${num}`));
+
+
+
 
 /**
  * ### Challenge `processLastItem`
