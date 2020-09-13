@@ -129,8 +129,12 @@ function processSum(num1, num2, callback) {
 function processProduct(num1, num2, callback) {
   return callback(num1*num2);
 }
-console.log(processProduct(2, 7, num=>`${num} is a big number!`));
-console.log(processProduct(25, 0, num=>num+1000));
+// console.log(processProduct(2, 7, num=>`${num} is a big number!`));
+// console.log(processProduct(25, 0, num=>num+1000));
+
+
+
+
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -173,9 +177,16 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function lowerCaseStrings(/* code here */) {
-  /* code here */
+function lowerCaseStrings(strings) {
+  return strings.map( str => str.toLowerCase());
 }
+// console.log(lowerCaseStrings([ 'Orange', 'APPLE', 'banana', 'mAnGo']));
+// console.log(lowerCaseStrings(['a', 'b', 'c']));
+
+
+
+
+
 
 /**
  * ### Challenge `isItAnApple`
