@@ -178,7 +178,9 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function lowerCaseStrings(strings) {
-  return strings.map( str => str.toLowerCase());
+  const newArr = [];
+  strings.forEach( str => newArr.push(str.toLowerCase()));
+  return newArr;
 }
 // console.log(lowerCaseStrings([ 'Orange', 'APPLE', 'banana', 'mAnGo']));
 // console.log(lowerCaseStrings(['a', 'b', 'c']));
@@ -203,9 +205,11 @@ function lowerCaseStrings(strings) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(strings) {
+  return strings.map( str => str === "apple");
 }
+// console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
+// console.log(isItAnApple(['a', 'b', 'c' ]));
 
 /**
  * ### Challenge `removeApple`
