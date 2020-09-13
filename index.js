@@ -230,8 +230,8 @@ function isItAnApple(strings) {
 function removeApple(strings) {
   return strings.filter( str => str !== "apple");
 }
-console.log(removeApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
-console.log(removeApple(['a', 'b', 'c']));
+// console.log(removeApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
+// console.log(removeApple(['a', 'b', 'c']));
 
 /**
  * ### Challenge `stringSmash`
@@ -248,9 +248,11 @@ console.log(removeApple(['a', 'b', 'c']));
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(strings) {
+  return strings.reduce( (str1, str2) => str1.concat(str2));
 }
+// console.log(stringSmash([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
+// console.log(stringSmash(['a', 'b', 'c']));
 
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
