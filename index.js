@@ -68,6 +68,9 @@ function inning(){
   const score = Math.floor(Math.random() * 3);
   return score;
 }
+console.log(inning());
+console.log(inning());
+console.log(inning());
 
 
 /* Task 3: finalScore()
@@ -119,8 +122,74 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, numInnings, game) {
+  game = getInningScore(game, inning);
+  return `${numInnings} inning: Away ${game.awayScore} - Home ${game.homeScore}`;
+}
+
+function getInningScore(game, inning) {
+  inningHome = inning();
+  inningAway = inning();
+  game.homeScore += inningHome;
+  game.awayScore += inningAway;
+  inning++;
+  return game;
+}
+
+function makeGame() {
+  return {
+    homeScore: 0,
+    awayScore: 0,
+    inning: 0,
+  }
+}
+const game = makeGame();
+console.log(scoreboard(getInningScore, inning, 1, game));
+console.log(scoreboard(getInningScore, inning, 2, game));
+console.log(scoreboard(getInningScore, inning, 3, game));
+console.log(scoreboard(getInningScore, inning, 4, game));
+console.log(scoreboard(getInningScore, inning, 5, game));
+console.log(scoreboard(getInningScore, inning, 6, game));
+console.log(scoreboard(getInningScore, inning, 7, game));
+console.log(scoreboard(getInningScore, inning, 8, game));
+console.log(scoreboard(getInningScore, inning, 9, game));
+
+
+
+
+
+
+/*******************************************************************************************************/
+// PERSONAL, CUSTOM FUNCTION THAT CREATES A GAME OBJECT AND DOES EVERYTHING IN THIS ASSIGNMENT IN A DIFFERENT WAY 
+function startGame() {
+  return {
+    "Home": 0,
+    "Away": 0,
+    "Inning": 0,
+    scoreInning: function() {
+      this["Inning"]++;
+      this["Home"] += inning();
+      this["Away"] += inning();
+    },
+    scoreboard: function() {
+      return `${this["Inning"]} inning: Away ${this["Away"]} — Home ${this["Home"]}`;
+    },
+  };
 }
 
 
+const game1 = startGame();
+
+function playInning(game) {
+  game.scoreInning();
+  console.log(game.scoreboard());
+}
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
+playInning(game1);
