@@ -359,7 +359,7 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
 }
 
@@ -388,8 +388,11 @@ function tallyUpDonations(/* CODE HERE */) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ *    counter1 is a closure — it uses lexical scope within the function to create a new function (a counter) that uses the count variable within the scope of the function. 
+ *    counter2 is NOT a closure. counter2 uses the variable "count" declared & assigned on line 408 — this count variable is in the global scope. 
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ *    
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
