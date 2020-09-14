@@ -136,14 +136,14 @@ function getInningScore(game, inning) {
   return game;
 }
 
-function makeGame() {
-  return {
-    homeScore: 0,
-    awayScore: 0,
-    inning: 0,
-  }
+
+const game = {
+  homeScore: 0,
+  awayScore: 0,
+  inning: 0,
 }
-const game = makeGame();
+
+
 console.log(scoreboard(getInningScore, inning, 1, game));
 console.log(scoreboard(getInningScore, inning, 2, game));
 console.log(scoreboard(getInningScore, inning, 3, game));
